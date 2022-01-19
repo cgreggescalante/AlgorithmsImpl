@@ -2,7 +2,7 @@ import random
 import string
 from math import gcd
 
-alphabet = string.ascii_letters + "!@#$%^&*()-=_+[]\\{}|;':\",./<>?`~ "
+alphabet = string.ascii_letters + "1234567890!@#$%^&*()-=_+[]\\{}|;':\",./<>?`~ "
 
 
 def encrypt(msg, a, b):
@@ -27,7 +27,7 @@ def decrypt(msg, a, b):
 
 
 if __name__ == '__main__':
-    message = "cake and cheese"
+    message = "cake and cheese1234/`"
     a, b = random.randint(1, 10000), random.randint(1, 10000)
     while gcd(a, len(alphabet)) > 1:
         a = random.randint(1, 10000)
