@@ -1,4 +1,4 @@
-import random
+from utils.random_array import random_array
 
 
 def sort(lst):
@@ -13,6 +13,6 @@ def sort(lst):
 
 
 if __name__ == '__main__':
-    arr = [random.randint(1, 100) for _ in range(100)]
+    arr = random_array(1, 100, 100)
     s_arr = sorted(arr)
     assert sort(arr) == s_arr

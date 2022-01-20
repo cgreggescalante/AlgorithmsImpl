@@ -1,5 +1,6 @@
-import random
 import time
+
+from utils.random_array import random_array
 
 
 def sort(lst):
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     repeat = 10
     s = 0
     for _ in range(repeat):
-        arr = [random.randint(1, 100000) for _ in range(500000)]
+        arr = random_array(1, 100000, 500000)
         start = time.perf_counter()
         sort(arr)
         s += time.perf_counter() - start

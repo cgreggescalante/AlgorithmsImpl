@@ -1,5 +1,7 @@
 import random
 
+from utils.random_array import random_array
+
 
 def sort(lst):
     while True:
@@ -13,5 +15,6 @@ def sort(lst):
 
 
 if __name__ == '__main__':
-    arr = [1, 6, 2, 7, 8, 5, 1, 3]
-    assert sort(arr.copy()) == sorted(arr)
+    arr = random_array(1, 100, 100)
+    s_arr = sorted(arr)
+    assert sort(arr.copy()) == s_arr

@@ -1,6 +1,5 @@
-import random
-
 from sorts import bubble_sort
+from utils.random_array import random_array
 
 
 def sort(lst, k):
@@ -15,6 +14,6 @@ def sort(lst, k):
 
 
 if __name__ == '__main__':
-    arr = [random.randint(1, 100) for _ in range(100)]
+    arr = random_array(1, 100, 100)
     s_arr = sorted(arr)
     assert sort(arr, 5) == s_arr

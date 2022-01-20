@@ -1,5 +1,7 @@
 from typing import Iterable
 
+from utils.random_array import random_array
+
 
 def sort(lst: Iterable[int]) -> list[int]:
     m = max(lst)
@@ -15,5 +17,6 @@ def sort(lst: Iterable[int]) -> list[int]:
 
 
 if __name__ == '__main__':
-    arr = [1, 5, 9, 2, 8, 3, 7]
-    assert sort(arr) == sorted(arr)
+    arr = random_array(1, 100, 100)
+    s_arr = sorted(arr)
+    assert sort(arr) == s_arr
