@@ -77,6 +77,15 @@ class LinkedList:
             node.next = None
             return node
 
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node
+            node = node.next
+
+    def __len__(self):
+        return len(tuple(self))
+
     def __str__(self):
         if self.head:
             return f"LinkedList[{self.head}]"
